@@ -1,0 +1,44 @@
+section.dark {
+    background: var(--background-dark);
+    color: #eeeeee;
+}
+
+.white {
+    background: #eeeeee; 
+    color: black;
+}
+
+div.dark {
+    background: #4c4f52;
+    color: #eeeeee;
+}
+
+.light {
+    background: #eeeeee; 
+    color: #4c4f52;
+}
+
+.gradient-green {
+    background: linear-gradient(to right bottom, rgb(74, 222, 128), rgb(6, 182, 212));
+}
+
+.gradient-orange {
+    background: linear-gradient(to right bottom, rgb(250, 204, 21), rgb(249, 115, 22));
+}
+
+
+.blue>div {
+    background: linear-gradient(45deg, rgb(98, 217, 255) 0%, rgb(75, 174, 207) 100%);
+}
+
+.pink>div {
+    background: linear-gradient(45deg, rgb(235, 146, 185) 0%, rgb(194, 33, 186) 100%);
+}
+
+.green>div {
+    background: linear-gradient(45deg, rgb(100, 240, 163) 0%, rgb(31, 192, 58) 100%);
+}
+
+.orange>div {
+    background: linear-gradient(45deg, rgb(250, 204, 21), rgb(249, 115, 22) 100%);
+}
