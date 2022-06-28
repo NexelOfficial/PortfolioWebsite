@@ -7,6 +7,7 @@ import { scrollUp, scrollDown } from "./scroll";
 
 import React from "react";
 import { Link } from "react-router-dom";
+import Projects from "./Projects";
 
 export default class Home extends React.Component {
     render() {
@@ -124,15 +125,7 @@ export default class Home extends React.Component {
                         />
                     </div>
                 </section>
-                <section className="text-section dark">
-                    <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                        Voluptate veritatis dignissimos asperiores eius fugiat
-                        dolor id, distinctio ab! Odio eveniet placeat aperiam?
-                        Eius autem molestias facere, provident saepe excepturi
-                        deserunt?
-                    </p>
-                </section>
+                <Projects/>
 
                 <section id="footer">Copyright &copy Nathan Diepeveen</section>
             </header>

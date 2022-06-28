@@ -23,6 +23,7 @@ function App() {
 
 ReactDOM.render(
     <Router>
+        <div id="window-holder"></div>
         <App/>
     </Router>,
     document.getElementById("root")
