@@ -1,94 +1,134 @@
 // Commit styles
 .commit {
-    display: flex;
-    margin: 2%;
+  display: flex;
+  margin: 2%;
 }
 
 .commit:hover {
-    transform: scale(105%);
-    cursor: pointer;
+  transform: scale(105%);
+  cursor: pointer;
 }
 
 .commit-text {
-    margin: 0px;
-    padding-left: 1px;
-    font-size: 1.5rem;
+  margin: 0px;
+  padding-left: 1px;
+  font-size: 1.5rem;
 }
 
 .commit-date {
-    margin: 0px;
-    padding-left: 1px;
-    font-size: 1rem;
+  margin: 0px;
+  padding-left: 1px;
+  font-size: 1rem;
 }
 
 .commit-image {
-    width: 50px;
-    height: 50px;
-    margin: 2%;
-    border-radius: 20%;
+  width: 50px;
+  height: 50px;
+  margin: 2%;
+  border-radius: 20%;
 }
 
 .commit-link:hover {
-    cursor: pointer;
+  cursor: pointer;
 }
 
 .project-link {
-    font-size: 90%;
+  font-size: 90%;
 }
 
 // Project styles
 .loading-screen {
-    background-color: #eeeeee;
-    position: absolute;
-    width: fit-content;
-    height: fit-content;
-    z-index: 1;
+  background-color: #eeeeee;
+  position: absolute;
+  width: fit-content;
+  height: fit-content;
+  z-index: 1;
 }
 
 .project {
-    border-radius: 25px;
-    background: white;
-    margin: 1rem;
-    color: #4c4f52;
-    padding: 15px;
-    font-size: 1.7rem;
-    box-shadow: 0px 3px 3px #717171d4;
-    display: block;
-    align-items: center; 
-    flex: 3 0 0;
+  border-radius: 25px;
+  background: white;
+  margin: 1rem;
+  color: #4c4f52;
+  padding: 15px;
+  font-size: 1.7rem;
+  box-shadow: 0px 3px 3px #717171d4;
+  display: block;
+  align-items: center;
+  flex: 3 0 0;
+}
+
+.projects-commits {
+  max-height: 200px;
+  overflow-y: scroll;
+}
+
+.project-link {
+  font-size: 90%;
+  margin-bottom: 0;
+  margin-left: auto;
+  margin-right: 0;
+}
+
+.icon-container {
+  margin-top: 0;
+  margin-bottom: auto;
+  position: relative;
+  top: 0;
+  width: 20%;
+  margin: 20px;
+  text-align: left;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(350px,1fr));
+}
+
+.background {
+  position: fixed;
+  display: grid;
+  place-items: center;
+  background-color: #eee;
+  background-color: var(--background);
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(55, 55, 55, 0.5);
+  z-index: 1000;
 }
 
 .project-image {
-    margin: 5%;
-    height: auto;
-    width: auto;
+  margin: 5%;
+  height: auto;
+  width: auto;
 }
 
 .dark {
-    background: #4c4f52;
-    color: #eeeeee;
+  background: #4c4f52;
+  color: #eeeeee;
 }
 
 .stats-div {
-    display: block;
-    flex-wrap: nowrap;
-    align-items: center;
-    justify-content: space-evenly;
-    flex: 1 0 auto;
+  display: block;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: space-evenly;
+  flex: 1 0 auto;
 }
 
-@media screen and (min-width: 1460px)
-{
-    .stats-div {
-        display: flex;
-    }
+@media screen and (min-width: 1460px) {
+  .stats-div {
+    display: flex;
+  }
 
-    .project {
-        display: flex;
-    }
+  .project {
+    display: flex;
+  }
 
-    .project-image {
-        height: 50%;
-        width: auto;
-    }
+  .project-image {
+    height: 50%;
+    width: auto;
+  }
 }

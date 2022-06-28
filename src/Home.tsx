@@ -17,37 +17,17 @@ export default class Home extends React.Component {
                     <div className="titles">
                         <h1 className="page-title">Nathan Diepeveen</h1>
                         <h1 className="page-subtitle">
-                            Lorem ipsum dolor sit amet consectetur, adipisicing
-                            elit. Repellendus pariatur nisi error distinctio
-                            impedit officiis.
+                            An experienced fullstack developer
                         </h1>
                     </div>
 
-                    <div className="menu-buttons">
-                        <button
-                            id="dropdown-button"
-                            className="liquid-dot-button"
-                            onClick={onDropdownClick}>
-                            <i className="fas fa-bars"></i>
-                        </button>
-                        <Link to="/">
-                            <button className="liquid-dot-button menu-item">
-                                <i className="fas fa-home"></i>
-                            </button>
-                        </Link>
-                        <Link to="/projects">
-                            <button className="liquid-dot-button menu-item">
-                                <i className="fas fa-tasks"></i>
-                            </button>
-                        </Link>
-                        <button
-                            id="theme-button"
-                            className="liquid-dot-button menu-item"
-                            onClick={onThemesClick}>
-                            <i className="fas fa-palette"></i>
-                        </button>
-                        <ThemeButtons />
-                    </div>
+                    <button
+                        id="theme-button"
+                        className="liquid-dot-button"
+                        onClick={onThemesClick}>
+                        <i className="fas fa-palette"></i>
+                    </button>
+                    <ThemeButtons />
 
                     <button
                         id="scroll-up-button"
@@ -110,12 +90,11 @@ export default class Home extends React.Component {
                         <div>
                             <h2>About me</h2>
                             <p>
-                                Lorem ipsum dolor sit amet consectetur
-                                adipisicing elit. Voluptate veritatis
-                                dignissimos asperiores eius fugiat dolor id,
-                                distinctio ab! Odio eveniet placeat aperiam?
-                                Eius autem molestias facere, provident saepe
-                                excepturi deserunt?
+                                I'm Nathan Diepeveen a {new Date().getFullYear() - 2003 + " "}
+                                year old fullstack developer from the Netherlands. I like
+                                programming with Object Oriented languages and to challenge
+                                myself. My favourite languages are JavaScript and C++. If you
+                                would like to know more about me, feel free to contact me.
                             </p>
                         </div>
                         <img
@@ -127,7 +106,7 @@ export default class Home extends React.Component {
                 </section>
                 <Projects/>
 
-                <section id="footer">Copyright &copy Nathan Diepeveen</section>
+                <section id="footer">Copyright &copy; Nathan Diepeveen</section>
             </header>
         );
     }

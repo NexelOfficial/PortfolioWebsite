@@ -4,6 +4,7 @@ type LiquidProps = {
     title: string;
     isDark: boolean;
     children: React.ReactChild | React.ReactChild[];
+    className?: string;
 }
 
 type ProgressBarProps = {
@@ -21,6 +22,7 @@ type CanvasProps = {
     title: string;
     subtitle: string;
     children: React.ReactChild | React.ReactChild[];
+    setShownWindow?: any
 }
 
 type Text = {
@@ -29,14 +31,15 @@ type Text = {
     text: string;
 }
 
-export function Canvas({title, subtitle, children}: CanvasProps) {
+export function Canvas({title, subtitle, children, setShownWindow}: CanvasProps) {
     return (
-        <div className="background scrollable" onClick={(e) => {
+        <div id="shownProject" className="background scrollable" onClick={(e) => {
             // Remove project and unlock page scrolling
             const scrollY = document.body.style.top;
             document.body.style.position = '';
             document.body.style.top = '';
             window.scrollTo(0, parseInt(scrollY || '0') * -1);
+            setShownWindow("");
         }}>
             <p className="liquid-div fade-in center scrollable">
                 <h2 className="">{title}</h2>
@@ -55,9 +58,9 @@ export function FontButton({icon, dest}: any) {
     );
 }
 
-export function Liquid({ title, isDark, children }: LiquidProps) {
+export function Liquid({ title, isDark, children, className }: LiquidProps) {
     return (
-        <div className={"fade-in liquid-div " + isDark ? "dark" : ""}>
+        <div className={className + " fade-in liquid-div center " + (isDark ? "dark" : "")}>
             <h4 style={{ textAlign: "center" }}>
                 {title}
             </h4>
@@ -81,6 +84,7 @@ export function ProgressBar(props: ProgressBarProps) {
 }
 
 export function Commit(commit: any) {
+    commit = commit.commit;
     const icon = commit.author ? commit.author.avatar_url : DEFAULT_PIC;
     let desc;
 
