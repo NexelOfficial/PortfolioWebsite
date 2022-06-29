@@ -1,6 +1,5 @@
 import { fadeToRGB } from "./themes";
-
-let DEFAULT_PIC = "./media/profile-picture.png";
+import DEFAULT_PIC from "./media/profile-picture.png"
 
 type LiquidProps = {
     title: string;
