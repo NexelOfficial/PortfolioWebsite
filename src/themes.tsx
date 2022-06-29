@@ -1,13 +1,10 @@
-import { connect } from "http2";
-import { toggles } from "./index";
-
 var root = document.documentElement;
 var currentTheme: HTMLElement;
 
 var path = window.location.href;
 var page = path.split("/").pop();
 
-function fadeToRGB(code: string) {
+export function fadeToRGB(code: string) {
     var newC = toRGB(code);
     var oldC = toRGB(localStorage.getItem(page + "_gradient")!);
     var steps = 10;
@@ -46,18 +43,6 @@ function setDefaultGradient() {
     if (page === "") setGradient("rgb(98, 217, 255)");
     else if (page === "projects") setGradient("rgb(255, 153, 57)");
     else if (page === "contact.html") setGradient("rgb(100, 240, 163)");
-}
-
-export function toggleThemesMenu() {
-    var themesMenu = document.getElementById("themes-menu");
-
-    if (!toggles.themesMenuShown) {
-        toggles.themesMenuShown = true;
-        themesMenu!.style.animation = "buttonShow 0.15s ease-in-out forwards";
-    } else {
-        toggles.themesMenuShown = false;
-        themesMenu!.style.animation = "buttonHide 0.15s ease-in-out forwards";
-    }
 }
 
 function setGradientRGB(rgb: Array<number>) {
@@ -102,6 +87,5 @@ if (grad) setGradient(grad);
 else setDefaultGradient();
 
 export function onThemesClick() {
-    toggleThemesMenu();
     addThemeClickables();
 }

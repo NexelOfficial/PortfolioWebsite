@@ -71,18 +71,17 @@
 }
 
 .icon-container {
-  margin-top: 0;
-  margin-bottom: auto;
   position: relative;
-  top: 0;
-  width: 20%;
-  margin: 20px;
-  text-align: left;
 }
 
 .grid {
   display: grid;
   grid-template-columns: repeat(auto-fit,minmax(350px,1fr));
+}
+
+.project-url {
+  color: black;
+  margin: 5px;
 }
 
 .background {

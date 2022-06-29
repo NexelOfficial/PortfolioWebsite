@@ -1,3 +1,5 @@
+import { fadeToRGB } from "./themes";
+
 let DEFAULT_PIC = "./media/profile-picture.png";
 
 type LiquidProps = {
@@ -31,7 +33,7 @@ type Text = {
     text: string;
 }
 
-export function Canvas({title, subtitle, children, setShownWindow}: CanvasProps) {
+export function Canvas({ title, subtitle, children, setShownWindow }: CanvasProps) {
     return (
         <div id="shownProject" className="background scrollable" onClick={(e) => {
             // Remove project and unlock page scrolling
@@ -50,7 +52,7 @@ export function Canvas({title, subtitle, children, setShownWindow}: CanvasProps)
     )
 }
 
-export function FontButton({icon, dest}: any) {
+export function FontButton({ icon, dest }: any) {
     return (
         <a className="project-url" rel="noopener noreferrer" target="_blank" href={dest}>
             <i className={icon}></i>
@@ -104,6 +106,37 @@ export function Commit(commit: any) {
         </div>
     )
 }
+
+export const ThemeButtons = () => {
+    const colors = [
+        "rgb(255, 226, 65)",
+        "rgb(100, 240, 163)",
+        "rgb(235, 146, 185)",
+        "rgb(98, 217, 255)",
+        "rgb(255, 90, 90)",
+        "rgb(101, 103, 255)",
+        "rgb(255, 153, 57)",
+    ];
+
+    return (
+        <div id="themes-menu" className="liquid-div">
+            {colors.map((color) => {
+                return (
+                    <button
+                        className="theme-button"
+                        style={{
+                            backgroundColor: color
+                        }}
+                        onClick={(e) => {
+                            var color = e.currentTarget.style.backgroundColor;
+                            fadeToRGB(color);
+                        }}>
+                    </button>
+                );
+            })}
+        </div>
+    );
+};
 
 export function Project({ text, isDark, children }: ProjectProps) {
     const theme = isDark ? "dark" : "";
